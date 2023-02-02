@@ -61,13 +61,13 @@
               <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded shadow-[0px_0px_5px_2px_rgba(0,0,0,0.1)] dark:divide-gray-600" id="dropdown-user">
                 <ul class="py-1">
                   <li>
-                    <a href="{{route('show_profile')}}" class="block px-4 py-2 text-sm text-gray-500 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-white" role="menuitem">Profil</a>
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-500 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-white" role="menuitem">Keranjang</a>
                   </li>
                   <li>
-                    <a href="/cart" class="block px-4 py-2 text-sm text-gray-500 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-white" role="menuitem">Keranjang</a>
+                    <a href="/cart" class="block px-4 py-2 text-sm text-gray-500 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-white" role="menuitem">Pesanan</a>
                   </li>
                   <li>
-                    <a href="#" class="block px-4 py-2 text-sm text-gray-500 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-white" role="menuitem">Pesanan</a>
+                    <a href="{{route('show_profile')}}" class="block px-4 py-2 text-sm text-gray-500 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-white" role="menuitem">Pengaturan</a>
                   </li>
 
                     <!-- Authentication Links -->
