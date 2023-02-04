@@ -9,7 +9,7 @@
 <body>
     <form action="{{route('update_product', $product)}}" method="post" enctype="multipart/form-data">   
         @method('patch')
-        @csrf   
+        @csrf
         <label>Name</label><br>
         <input type="text" name="name" placeholder = "Name" value="{{$product->name}}"><br>
         <label>Description</label><br>

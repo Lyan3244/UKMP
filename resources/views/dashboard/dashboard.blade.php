@@ -62,8 +62,8 @@
                             <hr>
                             </div>    
                         </div>
-                        <div class="container my-5 mx-auto px-4 md:px-12">
-                            <div class="flex flex-wrap -mx-1 lg:-mx-4">
+                        <div class="container my-5 mx-auto md:px-12">
+                            <div class="flex flex-wrap">
 
                                 <!-- Column -->
                                 <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
@@ -282,7 +282,7 @@
                                 <!-- END Column -->
                             </div>
                         </div>
-                        <div class="text-right pr-10">
+                        <div class="text-right pr-12">
                         <a class="hover:underline text-black font-semibold py-7 px-4" href="#">Pengumuman Lainnya</a>
                         </div>
                     </div>
