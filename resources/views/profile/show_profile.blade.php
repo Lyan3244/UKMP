@@ -13,41 +13,52 @@
     <div class="max-w-5xl mx-auto mt-16 border rounded-lg">
             <div class="flex items-center justify-center my-3">
                 <nav>
-                    <ul class="flex flex-col border border-gray-100 rounded-lg md:flex-row md:space-x-10 md:mt-0 md:text-sm md:font-medium md:border-0 dark:border-gray-700">
+                    <ul class="flex flex-col border border-gray-100 rounded-lg md:flex-row md:space-x-16 md:mt-0 md:text-sm md:font-medium md:border-0 dark:border-gray-700">
                         <li>
-                        <div class="p-1 rounded hover:bg-gray-100">
-                        <a href="{{route('edit_profile', $user)}}" class="block py-2 pl-3 pr-4 text-gray-500 rounded md:hover:bg-transparent md:border-0 md:hover:text-gray-900 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent" aria-current="Biodata Diri">Biodata Diri</a>
+                        <div class="p-2 rounded hover:bg-gray-100">
+                        <a href="{{route('show_profile', $user)}}" class="block py-2 pl-3 pr-4 text-gray-500 rounded md:hover:bg-transparent md:border-0 md:hover:text-gray-900 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent" aria-current="Biodata Diri">Biodata Diri</a>
                         </div>
                         </li>
                         <li>
-                        <div class="p-1 rounded hover:bg-gray-100">
-                        <a href="#" class="block py-2 pl-3 pr-4 text-gray-500 rounded md:hover:bg-transparent md:border-0 md:hover:text-gray-900 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Alamat</a>
+                        <div class="p-2 rounded hover:bg-gray-100">
+                        <a href="{{route('alamat', $user)}}" class="block py-2 pl-3 pr-4 text-gray-500 rounded md:hover:bg-transparent md:border-0 md:hover:text-gray-900 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Alamat</a>
                         </div>
                         </li>
                         <li>
-                        <div class="p-1 rounded hover:bg-gray-100">
-                        <a href="#" class="block py-2 pl-3 pr-4 text-gray-500 rounded md:hover:bg-transparent md:border-0 md:hover:text-gray-900 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Edit Alamat</a>
-                        </div>
-                        </li>
-                        <li>
-                        <div class="p-1 rounded hover:bg-gray-100">
+                        <div class="p-2 rounded hover:bg-gray-100">
                         <a href="#" class="block py-2 pl-3 pr-4 text-gray-500 rounded md:hover:bg-transparent md:border-0 md:hover:text-gray-900 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Kata Sandi</a>
                         </div>
                         </li>
                 </nav>
             </div>
             <hr>
-                <div class="card-header text-base font-normal mx-5 my-7">
-                    {{ __('Profil Saya') }}
+                <div class="card-header text-base font-normal mx-10 my-5">
+                    <p class="text-lg font-medium">Profil {{$user->is_admin ? 'Admin':'Member'}}</p>
                     @if($errors->any())
                     @foreach($errors->all() as $error)
                     <p>{{$error}}</p>
                     @endforeach
                     @endif
-                    <p>Name : {{$user->name}} <a href="{{route('edit_profile', $user)}}" class="text-blue-700">edit</a></p>
-                    <p>Email : {{$user->email}}</p>
-                    <p>Telepon : {{$user->telepon}}</p>
-                    <p>Role : {{$user->is_admin ? 'Admin':'Member'}}</p>
+                    <table class="pt-3 border-spacing-2 border-separate">
+                        <tbody>
+                            <tr>
+                                <td>Nama</td>
+                                <td>:</td>
+                                <td>{{$user->name}}</td>
+                                <td><a href="{{route('edit_profile', $user)}}" class="text-blue-700">ubah</a></td>
+                            </tr>
+                            <tr>
+                                <td>Email</td>
+                                <td>:</td>
+                                <td>{{$user->email}}</td>
+                            </tr>
+                            <tr>
+                                <td>Telepon</td>
+                                <td>:</td>
+                                <td>{{$user->telepon}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
                     </form>
                 </div>
     </div>
