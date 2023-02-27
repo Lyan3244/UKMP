@@ -12,6 +12,7 @@
     @endphp
     <p>Order ID {{$order->id}}</p>
     <p>By {{$order->user->name}}</p>
+    <p>Pengiriman ke {{$order->user->alamat}} <a href="/alamat" class="text-blue-700 pl-5">ubah</a></p>
 
     @if($order->is_paid == true)
         <p>Paid</p>

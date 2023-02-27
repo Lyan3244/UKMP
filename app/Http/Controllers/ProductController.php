@@ -28,7 +28,8 @@ class ProductController extends Controller
             'price'=> 'required',
             'stock'=> 'required',
             'description'=> 'required',
-            'image'=> 'required'
+            'image'=> 'required',
+            'writer'=>'required'
         ]);
 
         $file = $request->file('image');
@@ -41,7 +42,8 @@ class ProductController extends Controller
             'price'=>$request->price,
             'stock'=>$request->stock,
             'description'=>$request->description,
-            'image'=>$path
+            'image'=>$path,
+            'writer'=>$request->writer
         ]);
 
         return Redirect::route('index_product');
@@ -67,6 +69,7 @@ class ProductController extends Controller
     {
         $request->validate([
             'name'=> 'required',
+            'writer'=>'required',
             'price'=> 'required',
             'stock'=> 'required',
             'description'=> 'required',
@@ -80,6 +83,7 @@ class ProductController extends Controller
 
         $product->update([
             'name'=>$request->name,
+            'writer'=>$request->writer,
             'price'=>$request->price,
             'stock'=>$request->stock,
             'description'=>$request->description,

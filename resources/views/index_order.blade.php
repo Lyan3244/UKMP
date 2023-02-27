@@ -10,7 +10,6 @@
     @foreach ($orders as $order)
         <p>ID : {{$order->id}}</p>
         <p>User : {{$order->user->name}}</p>
-        <p>{{$order->produk->name}}</p>
         <p>{{$order->created_at}}</p>
         <p>
             @if($order->is_paid == true)

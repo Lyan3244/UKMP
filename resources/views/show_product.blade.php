@@ -8,7 +8,8 @@
 </head>
 <body>
     <a href="{{route('index_product')}}">Back</a>
-    <p>Name : {{$product->name}}</p>
+    <p>Judul Buku : {{$product->name}}</p>
+    <p>Penulis : {{$product->writer}}</p>
     <p>Description : {{$product->description}}</p>
     <p>Rp : {{$product->price}}</p>
     <p>Stock : {{$product->stock}}</p>

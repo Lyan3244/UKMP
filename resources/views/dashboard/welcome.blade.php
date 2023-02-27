@@ -1,4 +1,4 @@
-@extends('layouts.navbar')
+@extends('layouts.navbar-login')
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
