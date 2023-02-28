@@ -57,7 +57,7 @@
                     <!--Karya Sastra-->
                     <div class="m-2 p-2 mt-10">
                         <div class="text-2xl text-center font-semibold whitespace-nowrap">
-                            Buku Antologi Cerita Pendek
+                            Buku Antologi Cerita Puisi
                             <div class="mt-2">
                             <hr>
                             </div>    
@@ -77,17 +77,17 @@
 
                                         <header class="flex items-center justify-between leading-tight p-1 md:p-4">
                                             <h1 class="text-lg">
-                                                <a class="no-underline hover:underline text-black" href="#">
+                                                <a class="no-underline hover:underline text-gray-500" href="#">
                                                     Article Title
                                                 </a>
                                             </h1>
-                                            <p class="text-grey-darker text-sm">
+                                            <p class="text-gray-500 text-sm">
                                                 11/1/19
                                             </p>
                                         </header>
 
                                         <footer class="flex items-center justify-between leading-none p-1 md:p-4">
-                                            <a class="flex items-center no-underline hover:underline text-black" href="#">
+                                            <a class="flex items-center no-underline hover:underline text-gray-500" href="#">
                                                 <img alt="Placeholder" class="block rounded-full" src="https://picsum.photos/32/32/?random">
                                                 <p class="ml-2 text-sm">
                                                     Author Name
@@ -113,17 +113,17 @@
 
                                         <header class="flex items-center justify-between leading-tight p-2 md:p-4">
                                             <h1 class="text-lg">
-                                                <a class="no-underline hover:underline text-black" href="#">
+                                                <a class="no-underline hover:underline text-gray-500" href="#">
                                                     Article Title
                                                 </a>
                                             </h1>
-                                            <p class="text-grey-darker text-sm">
+                                            <p class="text-gray-500 text-sm">
                                                 11/1/19
                                             </p>
                                         </header>
 
                                         <footer class="flex items-center justify-between leading-none p-2 md:p-4">
-                                            <a class="flex items-center no-underline hover:underline text-black" href="#">
+                                            <a class="flex items-center no-underline hover:underline text-gray-500" href="#">
                                                 <img alt="Placeholder" class="block rounded-full" src="https://picsum.photos/32/32/?random">
                                                 <p class="ml-2 text-sm">
                                                     Author Name
@@ -149,17 +149,17 @@
 
                                         <header class="flex items-center justify-between leading-tight p-2 md:p-4">
                                             <h1 class="text-lg">
-                                                <a class="no-underline hover:underline text-black" href="#">
+                                                <a class="no-underline hover:underline text-gray-500" href="#">
                                                     Article Title
                                                 </a>
                                             </h1>
-                                            <p class="text-grey-darker text-sm">
+                                            <p class="text-gray-500 text-sm">
                                                 11/1/19
                                             </p>
                                         </header>
 
                                         <footer class="flex items-center justify-between leading-none p-2 md:p-4">
-                                            <a class="flex items-center no-underline hover:underline text-black" href="#">
+                                            <a class="flex items-center no-underline hover:underline text-gray-500" href="#">
                                                 <img alt="Placeholder" class="block rounded-full" src="https://picsum.photos/32/32/?random">
                                                 <p class="ml-2 text-sm">
                                                     Author Name
@@ -185,17 +185,17 @@
 
                                         <header class="flex items-center justify-between leading-tight p-2 md:p-4">
                                             <h1 class="text-lg">
-                                                <a class="no-underline hover:underline text-black" href="#">
+                                                <a class="no-underline hover:underline text-gray-500" href="#">
                                                     Article Title
                                                 </a>
                                             </h1>
-                                            <p class="text-grey-darker text-sm">
+                                            <p class="text-gray-500 text-sm">
                                                 11/1/19
                                             </p>
                                         </header>
 
                                         <footer class="flex items-center justify-between leading-none p-2 md:p-4">
-                                            <a class="flex items-center no-underline hover:underline text-black" href="#">
+                                            <a class="flex items-center no-underline hover:underline text-gray-500" href="#">
                                                 <img alt="Placeholder" class="block rounded-full" src="https://picsum.photos/32/32/?random">
                                                 <p class="ml-2 text-sm">
                                                     Author Name
@@ -221,17 +221,17 @@
 
                                         <header class="flex items-center justify-between leading-tight p-2 md:p-4">
                                             <h1 class="text-lg">
-                                                <a class="no-underline hover:underline text-black" href="#">
+                                                <a class="no-underline hover:underline text-gray-500" href="#">
                                                     Article Title
                                                 </a>
                                             </h1>
-                                            <p class="text-grey-darker text-sm">
+                                            <p class="text-gray-500 text-sm">
                                                 11/1/19
                                             </p>
                                         </header>
 
                                         <footer class="flex items-center justify-between leading-none p-2 md:p-4">
-                                            <a class="flex items-center no-underline hover:underline text-black" href="#">
+                                            <a class="flex items-center no-underline hover:underline text-gray-500" href="#">
                                                 <img alt="Placeholder" class="block rounded-full" src="https://picsum.photos/32/32/?random">
                                                 <p class="ml-2 text-sm">
                                                     Author Name
@@ -257,17 +257,17 @@
 
                                         <header class="flex items-center justify-between leading-tight p-2 md:p-4">
                                             <h1 class="text-lg">
-                                                <a class="no-underline hover:underline text-black" href="#">
+                                                <a class="no-underline hover:underline text-gray-500" href="#">
                                                     Article Title
                                                 </a>
                                             </h1>
-                                            <p class="text-grey-darker text-sm">
+                                            <p class="text-gray-500 text-sm">
                                                 11/1/19
                                             </p>
                                         </header>
 
                                         <footer class="flex items-center justify-between leading-none p-2 md:p-4">
-                                            <a class="flex items-center no-underline hover:underline text-black" href="#">
+                                            <a class="flex items-center no-underline hover:underline text-gray-500" href="#">
                                                 <img alt="Placeholder" class="block rounded-full" src="https://picsum.photos/32/32/?random">
                                                 <p class="ml-2 text-sm">
                                                     Author Name
@@ -293,17 +293,17 @@
 
                                         <header class="flex items-center justify-between leading-tight p-2 md:p-4">
                                             <h1 class="text-lg">
-                                                <a class="no-underline hover:underline text-black" href="#">
+                                                <a class="no-underline hover:underline text-gray-500" href="#">
                                                     Article Title
                                                 </a>
                                             </h1>
-                                            <p class="text-grey-darker text-sm">
+                                            <p class="text-gray-500 text-sm">
                                                 11/1/19
                                             </p>
                                         </header>
 
                                         <footer class="flex items-center justify-between leading-none p-2 md:p-4">
-                                            <a class="flex items-center no-underline hover:underline text-black" href="#">
+                                            <a class="flex items-center no-underline hover:underline text-gray-500" href="#">
                                                 <img alt="Placeholder" class="block rounded-full" src="https://picsum.photos/32/32/?random">
                                                 <p class="ml-2 text-sm">
                                                     Author Name
@@ -329,17 +329,17 @@
 
                                         <header class="flex items-center justify-between leading-tight p-2 md:p-4">
                                             <h1 class="text-lg">
-                                                <a class="no-underline hover:underline text-black" href="#">
+                                                <a class="no-underline hover:underline text-gray-500" href="#">
                                                     Article Title
                                                 </a>
                                             </h1>
-                                            <p class="text-grey-darker text-sm">
+                                            <p class="text-gray-500 text-sm">
                                                 11/1/19
                                             </p>
                                         </header>
 
                                         <footer class="flex items-center justify-between leading-none p-2 md:p-4">
-                                            <a class="flex items-center no-underline hover:underline text-black" href="#">
+                                            <a class="flex items-center no-underline hover:underline text-gray-500" href="#">
                                                 <img alt="Placeholder" class="block rounded-full" src="https://picsum.photos/32/32/?random">
                                                 <p class="ml-2 text-sm">
                                                     Author Name
@@ -355,7 +355,7 @@
                             </div>
                         </div>
                         <div class="text-right pr-12">
-                        <a class="hover:underline text-black font-semibold py-7 px-4" href="#">Buku Lainnya</a>
+                        <a class="hover:underline text-gray-500 font-semibold py-7 px-4" href="#">Buku Lainnya</a>
                         </div>
                     </div>
                     <!-- Pengumuman End -->

@@ -57,7 +57,7 @@
                     <!--Karya Sastra-->
                     <div class="m-2 p-2 mt-10">
                         <div class="text-2xl text-center font-semibold whitespace-nowrap">
-                            Buku Antologi Cerita Pendek
+                            Buku Antologi Puisi
                             <div class="mt-2">
                             <hr>
                             </div>    

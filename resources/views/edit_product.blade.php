@@ -12,6 +12,8 @@
         @csrf
         <label>Name</label><br>
         <input type="text" name="name" placeholder = "Name" value="{{$product->name}}"><br>
+        <label>Nama Penulis</label><br>
+        <input type="text" name="writer" placeholder = "writer" value="{{$product->writer}}"><br>
         <label>Description</label><br>
         <input type="text" name="description" placeholder = "Description" value="{{$product->description}}"><br>
         <label for="">Price</label><br>
