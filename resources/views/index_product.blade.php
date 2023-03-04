@@ -50,7 +50,7 @@
                             <button type="submit" class="bg-blue-700 px-3 py-2 rounded text-white text-sm hover:bg-blue-500">Edit Buku</button>
                             </form>
                             </div>
-                        
+
                             <div>
                             <form action="{{route('delete_product', $product)}}" method="post">
                             @method('delete')

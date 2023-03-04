@@ -59,7 +59,7 @@
                                 </div>
                                 <div class="col-md-8 offset-md-4">
                                     <button type="submit" class="bg-blue-700 px-4 py-2 rounded">
-                                        <p class="text-white">{{ __('Submit Data') }}</p>
+                                        <p class="text-white">{{ __('Tambah Data') }}</p>
                                     </button>
                                 </div>
                             </div>

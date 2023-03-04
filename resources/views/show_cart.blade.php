@@ -52,14 +52,14 @@
                     @method('patch')
                     @csrf
                     <input type="number" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="amount" value="{{$cart->amount}}">
-                    <button type="submit" class="bg-blue-700 px-4 py-2 rounded text-white hover:bg-blue-500">Update Amount</button>
+                    <button type="submit" class="bg-blue-700 px-4 py-2 rounded text-white hover:bg-blue-500">Perbarui Jumlah</button>
                 </form>
                 </div>
                 <div class="px-2">
                 <form action="{{route('delete_cart', $cart)}}" method="post">
                     @method('delete')
                     @csrf
-                    <button type="submit" class="bg-blue-700 px-4 py-2 rounded text-white hover:bg-red-500">Delete</button>
+                    <button type="submit" class="bg-blue-700 px-4 py-2 rounded text-white hover:bg-red-500">Hapus</button>
                 </form>
                 </div>
             </div>
@@ -72,12 +72,12 @@
     </div>
     <!--akhir dari header keranjang-->
     <!--bagian total harga yang dibeli-->
-    <div class="border rounded-lg mx-10 mb-96 p-5">
+    <div class="border rounded-lg mx-10 p-5">
         <H1 class="font-semibold text-xl pb-2 text-gray-500">Ringkasan Belanja</H1>
         <p class="pb-2 text-gray-500">Total Harga Rp{{$total_price}}</p>
         <form action="{{ route('checkout') }}" method="post">
         @csrf
-        <button type="submit" class="bg-blue-700 px-20 py-2 rounded text-white hover:bg-blue-500" @if ($carts->isEmpty()) disabled @endif>Beli</button>
+        <button type="submit" class="bg-blue-700 px-20 py-2 rounded text-white hover:bg-blue-500" @if ($carts->isEmpty()) disabled @endif>Checkout</button>
         </form>
     </div>
     <!--akhir bagian total harga yang dibeli-->
