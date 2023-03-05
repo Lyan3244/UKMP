@@ -22,27 +22,28 @@
     </div>
 
     <!-- bagian daftar buku -->
-        <div class="flex flex-row items-center justify-center my-3 w-full">
+        <div class="grid grid-rows-2 grid-flow-col gap-2 items-center justify-center w-full">
             @foreach($products as $product)
                 <div class="px-2">
                     <div class="overflow-hidden rounded-lg shadow-md">
                         <a href="#">
+                        <form action="{{route('show_product', $product)}}" method="get">
+                            <button type="submit">
                             <img alt="Placeholder" class="block h-auto w-auto p-3" src="{{('storage/' . $product->image)}}">
                         </a>
-                        <hr>
-                        <header class="flex items-center justify-between leading-tight px-1 md:p-4">
-                            <h1 class="text-lg">
-                                <a class="no-underline text-gray-500" href="#">
-                                {{$product->name}}
-                                </a>
-                            </h1>
-                        </header>
-
-                        <div class="flex items-center justify-center">
-                            <form action="{{route('show_product', $product)}}" method="get">
-                            <button type="submit" class="bg-blue-700 px-3 py-2 rounded text-white text-sm hover:bg-blue-500">Detail Buku</button>
-                            </form>
-                        </div>
+                            <hr>
+                            <header class="flex items-center justify-center leading-tight px-1 md:p-4">
+                                <h1 class="text-lg">
+                                    <p class="text-gray-500">
+                                    {{$product->name}}
+                                    </p>
+                                    <p class="text-gray-500">
+                                        Rp{{$product->price}}
+                                    </p>
+                                </h1>
+                            </header>
+                            </button>
+                        </form>
 
                         <footer class="flex items-center justify-center leading-none md:p-4">
                             <div class="px-1">

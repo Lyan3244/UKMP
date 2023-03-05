@@ -16,7 +16,7 @@
     </div>
     <hr>
     <div class="px-2 pt-2">
-        <a href="/penulis.ukm.um/dashboard" class="text-blue-700 hover:text-gray-500"> Dashboard</a> <span class="text-gray-500">> Keranjang</span>
+        <a href="/product" class="text-blue-700 hover:text-gray-500"> Toko Buku</a> <span class="text-gray-500">> Tambah Keranjang</span> <span class="text-gray-500">> Keranjang</span>
         <div>
             @if($errors->any())
             @foreach($errors->all() as $error)

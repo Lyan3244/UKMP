@@ -11,6 +11,14 @@
         <p>ID : {{$order->id}}</p>
         <p>User : {{$order->user->name}}</p>
         <p>{{$order->created_at}}</p>
+        @foreach($order->transactions as $transaction)
+        <p>Nama Produk yang dibeli : {{$transaction->product->name}}</p>
+        <p>Banyak Produk yang dibeli : {{$transaction->amount}}</p>
+        @php
+            $total_price = $transaction->product->price * $transaction->amount;
+        @endphp
+        <p>Total Pembayaran  = Rp{{$total_price}}</p>
+    @endforeach
         <p>
             @if($order->is_paid == true)
                 paid

@@ -32,7 +32,13 @@
                             <div class="grid grid-cols-2 mb-3">
                                 <label class="col-md-4 col-form-label text-md-end text-gray-500 text-right pr-16">{{ __('Sinopsis Buku') }}</label>
                                 <div class="col-md-7">
-                                    <input type="text" class="form-control bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 w-full dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="description" placeholder="Sinopsis Buku">
+                                    <input type="text" class="form-control bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 w-full dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="sinopsis" placeholder="Sinopsis Buku">
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-2 mb-3">
+                                <label class="col-md-4 col-form-label text-md-end text-gray-500 text-right pr-16">{{ __('Detail Buku') }}</label>
+                                <div class="col-md-7">
+                                    <input type="text" class="form-control bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 w-full dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="description" placeholder="Detail Buku">
                                 </div>
                             </div>
                             <div class="grid grid-cols-2 mb-3">

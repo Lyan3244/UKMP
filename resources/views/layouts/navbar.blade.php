@@ -64,6 +64,12 @@
                         <li>
                           <a href="#" class="block py-2 pl-3 pr-4 text-gray-500 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Prediksi Penjualan</a>
                         </li>
+                        <li>
+                          <a href="/cart" class="block py-2 pl-3 pr-4 text-gray-500 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent" role="menuitem">Keranjang</a>
+                        </li>
+                        <li>
+                          <a href="#" class="block py-2 pl-3 pr-4 text-gray-500 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent" role="menuitem">Riwayat Pesanan</a>
+                        </li>
                       </ul>
                     </div>
                   <!--end fitur-->
@@ -83,13 +89,7 @@
                     <a href="/product/create" class="block px-4 py-2 text-sm text-gray-500 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-white" role="menuitem">Tambah Buku</a>
                   </li>
                   <li>
-                    <a href="/cart" class="block px-4 py-2 text-sm text-gray-500 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-white" role="menuitem">Keranjang</a>
-                  </li>
-                  <li>
                     <a href="/order" class="block px-4 py-2 text-sm text-gray-500 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-white" role="menuitem">Daftar Pesanan</a>
-                  </li>
-                  <li>
-                    <a href="#" class="block px-4 py-2 text-sm text-gray-500 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-white" role="menuitem">Riwayat Pesanan</a>
                   </li>
                   <li>
                     <a href="{{route('show_profile')}}" class="block px-4 py-2 text-sm text-gray-500 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-white" role="menuitem">Pengaturan</a>
@@ -98,13 +98,13 @@
                     @guest
                     @if (Route::has('login'))
                       <li class="nav-item">
-                        <a class="block px-4 py-2 text-sm text-gray-500 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-white" role="menuitem" href="{{route('login')}}">{{ __('Login') }}</a>
+                        <a class="block px-4 py-2 text-sm text-gray-500 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-white" role="menuitem" href="{{route('login')}}">{{ __('Masuk') }}</a>
                       </li>
                     @endif
 
                     @if (Route::has('register'))
                       <li class="nav-item">
-                        <a class="block px-4 py-2 text-sm text-gray-500 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-white" role="menuitem" href="{{route('register')}}">{{ __('Register') }}</a>
+                        <a class="block px-4 py-2 text-sm text-gray-500 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-white" role="menuitem" href="{{route('register')}}">{{ __('Daftar') }}</a>
                       </li>
                     @endif
                   @else

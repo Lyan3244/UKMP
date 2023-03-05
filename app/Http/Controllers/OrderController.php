@@ -25,7 +25,7 @@ class OrderController extends Controller
         }
 
         $order = Order::create([
-            'user_id'=>$user_id
+            'user_id'=>$user_id,
         ]);
 
         foreach ($carts as $cart) {

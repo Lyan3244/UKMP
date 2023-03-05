@@ -40,7 +40,6 @@
                                 <td>Nama</td>
                                 <td>:</td>
                                 <td>{{$user->name}}</td>
-                                <td><a href="{{route('edit_profile', $user)}}" class="text-blue-700">ubah</a></td>
                             </tr>
                             <tr>
                                 <td>Email</td>
@@ -52,10 +51,21 @@
                                 <td>:</td>
                                 <td>{{$user->telepon}}</td>
                             </tr>
+                            <tr>
+                                <td>
+
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
-                    </form>
                 </div>
+            <div class="px-10 pb-14">
+                <a href ="{{route('edit_profile', $user)}}">
+                    <button class="text-white float-right bg-blue-700 hover:bg-blue-500 font-medium rounded-lg text-sm px-3 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700">
+                        Ubah
+                    </button>
+                </a>
+            </div>
     </div>
 </div>
 </body>

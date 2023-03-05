@@ -27,6 +27,7 @@ class ProductController extends Controller
             'name'=> 'required',
             'price'=> 'required',
             'stock'=> 'required',
+            'sinopsis'=>'required',
             'description'=> 'required',
             'image'=> 'required',
             'writer'=>'required'
@@ -41,6 +42,7 @@ class ProductController extends Controller
             'name'=>$request->name,
             'price'=>$request->price,
             'stock'=>$request->stock,
+            'sinopsis'=>$request->sinopsis,
             'description'=>$request->description,
             'image'=>$path,
             'writer'=>$request->writer
@@ -70,6 +72,7 @@ class ProductController extends Controller
         $request->validate([
             'name'=> 'required',
             'writer'=>'required',
+            'sinopsis'=>'required',
             'price'=> 'required',
             'stock'=> 'required',
             'description'=> 'required',
@@ -84,6 +87,7 @@ class ProductController extends Controller
         $product->update([
             'name'=>$request->name,
             'writer'=>$request->writer,
+            'sinopsis'=>$request->sinopsis,
             'price'=>$request->price,
             'stock'=>$request->stock,
             'description'=>$request->description,
