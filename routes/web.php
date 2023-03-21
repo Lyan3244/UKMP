@@ -7,6 +7,7 @@ use App\Http\Controllers\CartController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\PredictionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,7 +38,12 @@ Route::middleware(['admin'])->group(function() {
     
     Route::get('/order', [OrderController::class, 'index_order'])->name('index_order');
     Route::post('/order/{order}/Confirm', [OrderController::class, 'confirm_payment'])->name('confirm_payment');
-});
+    
+    Route::post('/prediksi/form', [PredictionController::class, 'store_prediksi'])->name('store_prediksi');
+    Route::get('/prediksi/form', [PredictionController::class, 'prediksi'])->name('prediksi');
+    Route::get('/prediksi/index', [PredictionController::class, 'index_prediksi'])->name('index_prediksi');
+    Route::get('/prediksi/proses/{prediction}', [PredictionController::class, 'show_prediksi'])->name('show_prediksi');
+    });
 
 Route::middleware(['auth'])->group(function() {
     Route::get('/product', [ProductController::class, 'index_product'])->name('index_product');

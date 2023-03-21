@@ -43,7 +43,7 @@
                             
                             </div>
                             <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="bg-blue-700 px-4 py-2 rounded">
+                                <button type="submit" class="bg-blue-700 px-4 py-2 rounded hover:bg-blue-500">
                                     <p class="text-white">{{ __('Masuk') }}</p>
                                 </button>
                             </div>
