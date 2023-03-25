@@ -28,7 +28,7 @@
             </div>
             <hr>
                 <div class="card-header text-base font-normal mx-10 my-5">
-                    <p>Alamat : {{$user->alamat}} <a href="{{route('edit_alamat', $user)}}" class="text-blue-700 pl-5">ubah</a></p>
+                    <p class="text-gray-600">Alamat : {{$user->alamat}} <a href="{{route('edit_alamat', $user)}}" class="text-blue-700 pl-5">ubah</a></p>
                     @if($errors->any())
                     @foreach($errors->all() as $error)
                     <p>{{$error}}</p>

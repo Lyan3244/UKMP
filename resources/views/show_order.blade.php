@@ -23,9 +23,9 @@
     @endphp
 
     <div class="pt-5">
-        <div class="mx-auto border rounded-md w-4/6 py-3 px-7">
-            <p class="text-lg">Pesanan Oleh - {{$order->user->name}}</p>
-            <p class="text-lg">Pengiriman ke {{$order->user->alamat}} <a href="/alamat" class="text-blue-700 pl-5 hover:text-blue-500">ubah</a></p>
+        <div class="mx-auto border border rounded-md w-4/6 py-3 px-7">
+            <p class="text-lg text-gray-500">Pesanan Oleh - {{$order->user->name}}</p>
+            <p class="text-lg text-gray-500">Pengiriman ke {{$order->user->alamat}} <a href="/alamat" class="text-blue-700 pl-5 hover:text-blue-500">ubah</a></p>
 
             @if($order->is_paid == true)
                 <p class="font-semibold text-blue-700 text-lg">Sudah Terbayar</p>
@@ -39,22 +39,22 @@
         <div class="mx-auto border rounded-md w-4/6">
         <table class="border-separate border-spacing-x-28 border-spacing-y-3">
                 <tr>
-                    <th>Buku yang Dipesan</th>
-                    <th>Harga Satuan</th>
-                    <th>Jumlah</th>
+                    <th class="text-gray-500">Buku yang Dipesan</th>
+                    <th class="text-gray-500">Harga Satuan</th>
+                    <th class="text-gray-500">Jumlah</th>
                 </tr>
             @foreach($order->transactions as $transaction)
                 <tr>
-                    <td>{{$transaction->product->name}}</td>
-                    <td>Rp{{$transaction->product->price}}</td>
-                    <td>{{$transaction->amount}} pcs</td>
+                    <td class="text-gray-500">{{$transaction->product->name}}</td>
+                    <td class="text-gray-500">Rp{{$transaction->product->price}}</td>
+                    <td class="text-gray-500">{{$transaction->amount}} pcs</td>
                 </tr>
                 @php
                 $total_price += $transaction->product->price * $transaction->amount;
                 @endphp
             @endforeach
                 <tr>
-                    <td class="font-semibold">Total Pesanan</td>
+                    <td class="font-semibold text-gray-500">Total Pesanan</td>
                     <td class="font-semibold text-lg text-blue-700">Rp{{$total_price}}</td>
                 </tr>
             </table>
@@ -66,9 +66,9 @@
             @if($order->is_paid == false && $order->payment_receipt == null)
                 <form action="{{route('submit_payment_receipt', $order)}}" method="post" enctype = "multipart/form-data">
                     @csrf
-                    <label for="payment_receipt" class="text-lg">Unggah Bukti Pembayaran</label>
+                    <label for="payment_receipt" class="text-lg text-gray-500">Unggah Bukti Pembayaran</label>
                     <div class="pt-3">
-                    <input type="file" name="payment_receipt" id="payment_receipt" class="border rounded-md"> <span><button type="submit" class="bg-blue-700 px-4 py-2 rounded text-white hover:bg-blue-500">Kirim</button></span>
+                    <input type="file" name="payment_receipt" id="payment_receipt" class="border rounded-md text-gray-500"> <span><button type="submit" class="bg-blue-700 px-4 py-2 rounded text-white hover:bg-blue-500">Kirim</button></span>
                     </div>
                 </form>
             @endif

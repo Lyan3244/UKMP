@@ -57,6 +57,12 @@ class ProductController extends Controller
         return view('index_product', compact('products'));
     }
 
+    public function index_product1()
+    {
+        $products = Product::all();
+        return view('dashboard/dashboard', compact('products'));
+    }
+
     public function show_product(Product $product)
     {
         return view('show_product', compact('product'));

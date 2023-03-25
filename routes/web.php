@@ -21,12 +21,10 @@ use App\Http\Controllers\PredictionController;
 */
 
 Route::get('/', function () {
-    return view('dashboard/welcome');
+    return view('auth/login');
 });
 
-Route::get('/penulis.ukm.um/dashboard', function() {
-    return view('dashboard/dashboard');
-});
+Route::get('/dashboard', [ProductController::class, 'index_product1'])->name('dashboard');
 
 Auth::routes();
 Route::middleware(['admin'])->group(function() {
@@ -42,11 +40,12 @@ Route::middleware(['admin'])->group(function() {
     Route::post('/prediksi/form', [PredictionController::class, 'store_prediksi'])->name('store_prediksi');
     Route::get('/prediksi/form', [PredictionController::class, 'prediksi'])->name('prediksi');
     Route::get('/prediksi/index', [PredictionController::class, 'index_prediksi'])->name('index_prediksi');
+    Route::delete('/prediksi/{prediction}', [PredictionController::class, 'delete_prediksi'])->name('delete_prediksi');
     Route::get('/prediksi/proses/{prediction}', [PredictionController::class, 'show_prediksi'])->name('show_prediksi');
     });
 
 Route::middleware(['auth'])->group(function() {
-    Route::get('/product', [ProductController::class, 'index_product'])->name('index_product');
+    Route::get('/cerpen', [ProductController::class, 'index_product'])->name('index_product');
     Route::get('/product/{product}', [ProductController::class, 'show_product'])->name('show_product');
     
     Route::post('/cart/{product}', [CartController::class, 'add_to_cart'])->name('add_to_cart');

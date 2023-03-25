@@ -28,7 +28,7 @@
         </div>
         <hr>
                 <div class="card-header text-base font-normal mx-10 my-5">
-                    <p class="text-lg font-medium">Profil {{$user->is_admin ? 'Admin':'Member'}}</p>
+                    <p class="text-lg font-medium text-gray-600">Profil {{$user->is_admin ? 'Admin':'Member'}}</p>
                     @if($errors->any())
                     @foreach($errors->all() as $error)
                     <p>{{$error}}</p>
@@ -37,19 +37,19 @@
                     <table class="pt-3 border-spacing-2 border-separate">
                         <tbody>
                             <tr>
-                                <td>Nama</td>
-                                <td>:</td>
-                                <td>{{$user->name}}</td>
+                                <td class="text-gray-600">Nama</td>
+                                <td class="text-gray-600">:</td>
+                                <td class="text-gray-600">{{$user->name}}</td>
                             </tr>
                             <tr>
-                                <td>Email</td>
-                                <td>:</td>
-                                <td>{{$user->email}}</td>
+                                <td class="text-gray-600">Email</td>
+                                <td class="text-gray-600">:</td>
+                                <td class="text-gray-600">{{$user->email}}</td>
                             </tr>
                             <tr>
-                                <td>Telepon</td>
-                                <td>:</td>
-                                <td>{{$user->telepon}}</td>
+                                <td class="text-gray-600">Telepon</td>
+                                <td class="text-gray-600">:</td>
+                                <td class="text-gray-600">{{$user->telepon}}</td>
                             </tr>
                             <tr>
                                 <td>
