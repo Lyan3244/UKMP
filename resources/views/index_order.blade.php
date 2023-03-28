@@ -23,7 +23,8 @@
     <div class="mx-auto border rounded-md w-4/6">
         <div class="bg-gray-100 rounded-t">
             <div class="px-5 py-3">
-            <p class="font-semibold text-lg text-gray-600">ID Pemesanan - {{$order->id}} oleh {{$order->user->name}}</p>
+            <p class="font-semibold text-lg text-gray-600">ID Pemesanan {{$order->id}} oleh {{$order->user->name}} - {{$order->user->telepon}}</p>
+            <p class="text-gray-600">Pengiriman ke {{$order->user->alamat}}</p>
             <p class="text-gray-600">{{$order->created_at}}</p>
             </div>
         </div>

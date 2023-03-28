@@ -45,6 +45,17 @@ class OrderController extends Controller
         return view('index_order', compact('orders'));
     }
 
+    public function index_order_riwayat()
+    {
+        $orders = Order::all();
+        return view('index_order_riwayat', compact('orders'));
+    }
+
+    public function show_order_riwayat(Order $order)
+    {
+        return view('show_order_riwayat', compact('order'));
+    }
+
     public function show_order(Order $order)
     {
         return view('show_order', compact('order'));

@@ -36,16 +36,18 @@ Route::middleware(['admin'])->group(function() {
     
     Route::get('/order', [OrderController::class, 'index_order'])->name('index_order');
     Route::post('/order/{order}/Confirm', [OrderController::class, 'confirm_payment'])->name('confirm_payment');
-    
+
     Route::post('/prediksi/form', [PredictionController::class, 'store_prediksi'])->name('store_prediksi');
     Route::get('/prediksi/form', [PredictionController::class, 'prediksi'])->name('prediksi');
     Route::get('/prediksi/index', [PredictionController::class, 'index_prediksi'])->name('index_prediksi');
     Route::delete('/prediksi/{prediction}', [PredictionController::class, 'delete_prediksi'])->name('delete_prediksi');
     Route::get('/prediksi/proses/{prediction}', [PredictionController::class, 'show_prediksi'])->name('show_prediksi');
+    Route::get('/prediksi/{prediction}/edit', [PredictionController::class, 'edit_prediksi'])->name('edit_prediksi');
+    Route::patch('prediksi/{prediction}/update', [PredictionController::class, 'update_prediksi'])->name('update_prediksi');
     });
 
 Route::middleware(['auth'])->group(function() {
-    Route::get('/cerpen', [ProductController::class, 'index_product'])->name('index_product');
+    Route::get('/toko-buku', [ProductController::class, 'index_product'])->name('index_product');
     Route::get('/product/{product}', [ProductController::class, 'show_product'])->name('show_product');
     
     Route::post('/cart/{product}', [CartController::class, 'add_to_cart'])->name('add_to_cart');
@@ -57,7 +59,9 @@ Route::middleware(['auth'])->group(function() {
     
     Route::get('/order/{order}', [OrderController::class, 'show_order'])->name('show_order');
     Route::post('/order/{order}/pay', [OrderController::class, 'submit_payment_receipt'])->name('submit_payment_receipt');
-    
+    Route::get('/riwayat', [OrderController::class, 'index_order_riwayat'])->name('index_order_riwayat');
+    Route::get('/riwayat/{order}', [OrderController::class, 'show_order_riwayat'])->name('show_order_riwayat');
+
     Route::get('/profile', [UserController::class, 'show_profile'])->name('show_profile');
     Route::get('/profile/{user}/edit', [UserController::class, 'edit_profile'])->name('edit_profile');
     Route::post('/profile/{user}/edit', [UserController::class, 'update_profile'])->name('update_profile');

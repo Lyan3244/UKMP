@@ -6,68 +6,48 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proses Prediksi</title>
+    <title>Document</title>
 </head>
 <body>
 <div class="container mt-7 mx-auto md:px-12">
     <!-- awal header bg abu-abu -->
-    <div class="mt-12 mx-auto text-2xl text-gray-500 font-semibold whitespace-nowrap p-2">
-    Daftar Data Prediksi
+    <div class="mt-10 text-2xl text-gray-500 font-semibold whitespace-nowrap p-2">
+        Riwayat Pesanan
     </div>
     <hr>
-    <!--akhir header bg abu-abu -->
-
-    <div class="p-2">
-    <a href="/dashboard" class="text-blue-700 hover:text-gray-500"> Dashboard</a> <span class="text-gray-500">> Daftar Data Prediksi</span>
+    <div class="px-2 pt-2">
+        <a href="/dashboard" class="text-blue-700 hover:text-gray-500"> Dashboard</a> <span class="text-gray-500">> Riwayat Pesanan</span>
     </div>
 
-<div class="pt-5 ml-2">
-    <table class="border border-spacing-3 border-separate border-slate-300 rounded-md">
-        <thead>
-            <tr>
-                <th class="text-gray-500">No</th>
-                <th class="text-gray-500">Judul Buku</th>
-                <th class="text-gray-500">Penjualan Maksimum</th>
-                <th class="text-gray-500">Penjualan Minimum</th>
-                <th class="text-gray-500">Persediaan Maksimum</th>
-                <th class="text-gray-500">Persediaan Minimum</th>
-                <th class="text-gray-500">Cetak Maksimum</th>
-                <th class="text-gray-500">Cetak Minimum</th>
-                <th class="text-gray-500">Banyak Buku yang Terjual</th>
-                <th class="text-gray-500">Persediaan Buku di UKMP</th>
-            </tr>
-        </thead>
-        <tbody>
-        @foreach($predictions as $prediction)
-            <tr>
-                <td class="text-center text-gray-500">{{$prediction['id']}}</td>
-                <td class="text-center text-gray-500">{{$prediction['judul_buku']}}</td>
-                <td class="text-center text-gray-500">{{$prediction['penjualan_max']}}</td>
-                <td class="text-center text-gray-500">{{$prediction['penjualan_min']}}</td>
-                <td class="text-center text-gray-500">{{$prediction['persediaan_max']}}</td>
-                <td class="text-center text-gray-500">{{$prediction['persediaan_min']}}</td>
-                <td class="text-center text-gray-500">{{$prediction['cetak_max']}}</td>
-                <td class="text-center text-gray-500"> {{$prediction['cetak_min']}}</td>
-                <td class="text-center text-gray-500">{{$prediction['banyak_terjual']}}</td>
-                <td class="text-center text-gray-500">{{$prediction['persediaan_buku']}}</td>
-                <td class="text-center text-gray-500"><form action="{{route('show_prediksi', $prediction)}}" method="get">
-                        <button type="submit" class="bg-blue-700 hover:bg-blue-500 px-4 py-2 rounded text-white">Hasil Prediksi</button>
-                    </form></td>
-                    <td><form action="{{route('edit_prediksi', $prediction)}}" method="get"><button class="bg-blue-700 hover:bg-blue-500 px-4 py-2 rounded text-white">Edit Data</button></form></td>
-                <td class="text-center"><form action="{{route('delete_prediksi', $prediction)}}" method="post">
-                    @method('delete')
-                    @csrf
-                    <button type="submit" class="bg-blue-700 hover:bg-red-500 px-4 py-2 rounded text-white">Hapus Data</button>
-                    </form></td>
-            </tr>
+    <div class ="pt-5">
+        @foreach($orders as $order)
+        <div class="mx-auto border rounded-md w-4/6">
+            <form action="{{route('show_order_riwayat', $order)}}" method="get">
+            @foreach($order->transactions as $transaction)
+                <button class="w-full" type="submit">
+                <div class="px-5 pt-3">
+                    <p class="py-1 text-gray-500 text-xl font-semibold text-left">Pesanan {{$order->id}}</p>
+                    <p class="py-1 text-gray-500 font-semibold text-left">{{$transaction->product->name}} - {{$transaction->amount}} pcs</p>
+                    @php
+                        $total_price = $transaction->product->price * $transaction->amount;
+                    @endphp
+                    <p class="py-1 text-blue-700 text-left font-semibold">Total Pesanan  : Rp{{$total_price}}</p>
+                </div>
+                </button>
+            @endforeach
+            </form>
+            <div class="pb-12 px-2">
+                <a href="/cerpen"><button class = "bg-blue-700 hover:bg-blue-500 px-8 py-2 rounded float-right text-white">Beli Lagi</button></a>
+            </div>
+        </div>
+        <br>
         @endforeach
-        </tbody>
-    </table>
-</div>
+    </div>
 </div>
 </div>
 </body>
-<footer class="pt-8 bg-white dark:bg-gray-900">
+
+<footer class="bg-white dark:bg-gray-900">
     <div class="px-4 py-6 bg-gray-100 dark:bg-gray-700 md:flex md:items-center md:justify-between">
         <span class="text-sm text-gray-500 dark:text-gray-300 sm:text-center ml-6">© 2023 <a href="https://flowbite.com/">Unit Kegiatan Mahasiswa Penulis (UKMP) Universitas Negeri Malang</a>
         </span>

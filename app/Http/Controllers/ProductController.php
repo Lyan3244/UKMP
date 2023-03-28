@@ -100,7 +100,7 @@ class ProductController extends Controller
             'image'=>$path
         ]);
 
-        return Redirect::route('show_product', $product);
+        return Redirect::route('index_product');
     }
     
     public function delete_product(Product $product)

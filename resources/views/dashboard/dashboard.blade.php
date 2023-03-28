@@ -61,11 +61,9 @@
             @foreach($products as $product)
                 <div class="px-2">
                     <div class="overflow-hidden rounded-lg shadow-md">
-                        <a href="#">
                         <form action="{{route('show_product', $product)}}" method="get">
                             <button type="submit">
                             <img alt="Placeholder" class="block h-auto w-auto p-3" src="{{('storage/' . $product->image)}}">
-                        </a>
                             <hr>
                             <header class="flex items-center justify-center leading-tight px-1 md:p-4">
                                 <h1 class="text-lg">
@@ -79,22 +77,6 @@
                             </header>
                             </button>
                         </form>
-
-                        <footer class="flex items-center justify-center leading-none md:p-4">
-                            <div class="px-1">
-                            <form action="{{route('edit_product', $product)}}" method="get">
-                            <button type="submit" class="bg-blue-700 px-3 py-2 rounded text-white text-sm hover:bg-blue-500">Edit Buku</button>
-                            </form>
-                            </div>
-
-                            <div>
-                            <form action="{{route('delete_product', $product)}}" method="post">
-                            @method('delete')
-                            @csrf
-                            <button type="submit" class="bg-blue-700 px-3 py-2 rounded text-white text-sm hover:bg-red-500">Hapus Buku</button>
-                            </form>
-                            </div>
-                        </footer>
                     </div>
                 </div>
             @endforeach

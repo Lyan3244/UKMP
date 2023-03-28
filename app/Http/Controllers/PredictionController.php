@@ -66,4 +66,38 @@ class PredictionController extends Controller
 
         return Redirect::route('index_prediksi');
     }
+
+    public function edit_prediksi(Prediction $prediction)
+    {
+        return view('prediksi/edit_prediksi', compact('prediction'));
+    }
+
+    public function update_prediksi(Prediction $prediction, Request $request)
+    {
+        $request->validate([
+            'judul_buku'=> 'required',
+            'penjualan_max'=> 'required',
+            'penjualan_min'=> 'required',
+            'persediaan_max'=> 'required',
+            'persediaan_min'=>'required',
+            'cetak_max'=> 'required',
+            'cetak_min'=>'required',
+            'banyak_terjual'=>'required',
+            'persediaan_buku'=>'required',
+        ]);
+
+        $prediction->update([
+            'judul_buku'=> $request->judul_buku,
+            'penjualan_max'=>$request->penjualan_max,
+            'penjualan_min'=>$request->penjualan_min,
+            'persediaan_max'=>$request->persediaan_max,
+            'persediaan_min'=>$request->persediaan_min,
+            'cetak_max'=>$request->cetak_max,
+            'cetak_min'=>$request->cetak_min,
+            'banyak_terjual'=>$request->banyak_terjual,
+            'persediaan_buku'=>$request->persediaan_buku,
+        ]);
+
+        return Redirect::route('index_prediksi');
+    }
 }
