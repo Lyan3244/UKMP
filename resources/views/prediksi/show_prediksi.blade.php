@@ -93,7 +93,7 @@
     <table class="border border-spacing-5 border-separate border-slate-300 rounded-md">
         <thead>
             <tr>
-                <td class="font-semibold text-gray-500">Penjualan Turun dan Naik</td>
+                <td class="font-semibold text-gray-500">Fungsi Keanggotaan Penjualan</td>
                 <td> </td>
                 <td> </td>
                 <td> </td>
@@ -129,7 +129,7 @@
     <table class="border border-spacing-5 border-separate border-slate-300 rounded-md">
         <thead>
             <tr>
-                <td class="font-semibold text-gray-500">Persediaan Banyak dan Sedikit</td>
+                <td class="font-semibold text-gray-500">Fungsi Keanggotaan Persediaan</td>
                 <td> </td>
                 <td> </td>
                 <td> </td>
@@ -232,25 +232,32 @@
     @php
     $batas_a1 = $A1*($prediction->cetak_max - $batas_cetak_naik) + $batas_cetak_naik;
     $batas_a2 = $prediction->cetak_max - ($A1*($prediction->cetak_max - $batas_cetak_naik));
-    $MOM1 = ($batas_a1 + $batas_a2)/2
+    $MOM1 = (($batas_a1 + $batas_a2)/2);
     @endphp
 
     <!--buat ngitung rataan MOM tapi dari sisi kanan-->
     @php
     $batas_a3 = $A1*($batas_cetak_turun - $prediction->cetak_min) + $prediction->cetak_min;
     $batas_a4 = $batas_cetak_turun - $A1*($batas_cetak_turun - $prediction->cetak_min);
-    $MOM2 = ($batas_a3 + $batas_a4)/2
+    $MOM2 = (($batas_a3 + $batas_a4)/2);
     @endphp
 
     <br>
     <table class="border border-spacing-5 border-separate border-slate-300 rounded-md">
         <thead>
             <tr>
-                <td class="font-bold text-blue-700">Hasil Prediksi Buku yang Harus Dicetak Tahun Depan</td>
-                <td class="font-bold text-blue-700">=</td>
-                <td class="font-bold text-blue-700">{{$rule2 + $rule1 > $rule4 + $rule3 ? $MOM2 : $MOM1}}</td>
+                <td class="text-blue-700">Hasil Prediksi Buku yang Harus dicetak Tahun Ini</td>
+                <td class="text-blue-700">=</td>
+                <td class="text-blue-700">{{$rule2 + $rule1 > $rule4 + $rule3 ? $MOM2 : $MOM1}}</td>
             </tr>
         </thead>
+        <tbody>
+            <tr>
+                <td class="text-blue-700">Total Harga Buku yang Harus dicetak tahun ini</td>
+                <td class="text-blue-700">=</td>
+                <td class="text-blue-700">Rp{{$rule2 + $rule1 > $rule4 + $rule3 ? $MOM2*40000 : $MOM1*40000}}</td>
+            </tr>
+        </tbody>
     </table>
     <!-- end tabel penjualan turun dan naik -->
     </div>

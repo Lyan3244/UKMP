@@ -27,14 +27,164 @@
             <tr>
                 <th class="text-gray-500">No</th>
                 <th class="text-gray-500">Judul Buku</th>
-                <th class="text-gray-500">Penjualan Maksimum</th>
-                <th class="text-gray-500">Penjualan Minimum</th>
-                <th class="text-gray-500">Persediaan Maksimum</th>
-                <th class="text-gray-500">Persediaan Minimum</th>
-                <th class="text-gray-500">Cetak Maksimum</th>
-                <th class="text-gray-500">Cetak Minimum</th>
-                <th class="text-gray-500">Banyak Buku yang Terjual</th>
-                <th class="text-gray-500">Persediaan Buku di UKMP</th>
+                <th class="text-gray-500">
+                    <div class="
+                    relative
+                    before:content-[attr(data-tip)]
+                    before:absolute
+                    before:px-2 before:py-2
+                    before:w-max before:max-w-xs
+                    before:-translate-x-1 before:-translate-y-full
+                    before:bg-black before:text-white
+                    before:rounded-md before:opacity-0
+                    before:transition-all
+
+                    after:absolute
+                    after:h-0 after:w-0
+                    after:-translate-x-1 after:border-8
+                    after:border-t-black
+                    after:border-1-transparent
+                    after:border-b-transparent
+                    after:border-r-transparent
+                    after:opacity-0
+                    after:transition-all
+
+                    hover:before:opacity-100 hover:after:opacity-100
+                    "
+                    data-tip="Data Penjualan Maksimum Buku dari Tahun 2018 hingga 2023">
+                    <button class="py-3" id="btn">Penjualan Maksimum</button></th></div>
+                <th class="text-gray-500">
+                    <div class="
+                    relative
+                    before:content-[attr(data-tip)]
+                    before:absolute
+                    before:px-2 before:py-2
+                    before:w-max before:max-w-xs
+                    before:-translate-x-1 before:-translate-y-full
+                    before:bg-black before:text-white
+                    before:rounded-md before:opacity-0
+                    before:transition-all
+
+                    after:absolute
+                    after:h-0 after:w-0
+                    after:-translate-x-1 after:border-8
+                    after:border-t-black
+                    after:border-1-transparent
+                    after:border-b-transparent
+                    after:border-r-transparent
+                    after:opacity-0
+                    after:transition-all
+
+                    hover:before:opacity-100 hover:after:opacity-100
+                    "
+                    data-tip="Data Penjualan Minimum Buku dari Tahun 2018 hingga 2023">
+                    <button class="py-3" id="btn">Penjualan Minimum</button></th></div>
+                <th class="text-gray-500">
+                    <div class="
+                    relative
+                    before:content-[attr(data-tip)]
+                    before:absolute
+                    before:px-2 before:py-2
+                    before:w-max before:max-w-xs
+                    before:-translate-x-1 before:-translate-y-full
+                    before:bg-black before:text-white
+                    before:rounded-md before:opacity-0
+                    before:transition-all
+
+                    after:absolute
+                    after:h-0 after:w-0
+                    after:-translate-x-1 after:border-8
+                    after:border-t-black
+                    after:border-1-transparent
+                    after:border-b-transparent
+                    after:border-r-transparent
+                    after:opacity-0
+                    after:transition-all
+
+                    hover:before:opacity-100 hover:after:opacity-100
+                    "
+                    data-tip="Data Persediaan Maksimum Buku dari Tahun 2018 hingga 2023">
+                    <button class="py-3" id="btn">Persediaan Maksimum</button></th></div>
+                <th class="text-gray-500">
+                    <div class="
+                    relative
+                    before:content-[attr(data-tip)]
+                    before:absolute
+                    before:px-2 before:py-2
+                    before:w-max before:max-w-xs
+                    before:-translate-x-1 before:-translate-y-full
+                    before:bg-black before:text-white
+                    before:rounded-md before:opacity-0
+                    before:transition-all
+
+                    after:absolute
+                    after:h-0 after:w-0
+                    after:-translate-x-1 after:border-8
+                    after:border-t-black
+                    after:border-1-transparent
+                    after:border-b-transparent
+                    after:border-r-transparent
+                    after:opacity-0
+                    after:transition-all
+
+                    hover:before:opacity-100 hover:after:opacity-100
+                    "
+                    data-tip="Data Persediaan Minimum Buku dari Tahun 2018 hingga 2023">
+                    <button class="py-3" id="btn">Persediaan Minimum</button></th></div>
+                <th class="text-gray-500">
+                    <div class="
+                    relative
+                    before:content-[attr(data-tip)]
+                    before:absolute
+                    before:px-2 before:py-2
+                    before:w-max before:max-w-xs
+                    before:-translate-x-1 before:-translate-y-full
+                    before:bg-black before:text-white
+                    before:rounded-md before:opacity-0
+                    before:transition-all
+
+                    after:absolute
+                    after:h-0 after:w-0
+                    after:-translate-x-1 after:border-8
+                    after:border-t-black
+                    after:border-1-transparent
+                    after:border-b-transparent
+                    after:border-r-transparent
+                    after:opacity-0
+                    after:transition-all
+
+                    hover:before:opacity-100 hover:after:opacity-100
+                    "
+                    data-tip="Data Cetak Maksimum Buku dari Tahun 2018 hingga 2022">
+                    <button class="py-3" id="btn">Cetak Maksimum</button></th></div>
+                <th class="text-gray-500">
+                    <div class="
+                    relative
+                    before:content-[attr(data-tip)]
+                    before:absolute
+                    before:px-2 before:py-2
+                    before:w-max before:max-w-xs
+                    before:-translate-x-1 before:-translate-y-full
+                    before:bg-black before:text-white
+                    before:rounded-md before:opacity-0
+                    before:transition-all
+
+                    after:absolute
+                    after:h-0 after:w-0
+                    after:-translate-x-1 after:border-8
+                    after:border-t-black
+                    after:border-1-transparent
+                    after:border-b-transparent
+                    after:border-r-transparent
+                    after:opacity-0
+                    after:transition-all
+
+                    hover:before:opacity-100 hover:after:opacity-100
+                    "
+                    data-tip="Data Cetak Minimum Buku dari Tahun 2018 hingga 2022">
+                    <button class="py-3">Cetak Minimum</button></th></div>
+                <th class="text-gray-500">Banyak Pesanan Buku Tahun Ini</th>
+                <th class="text-gray-500">Persediaan Buku di Awal Tahun</th>
             </tr>
         </thead>
         <tbody>

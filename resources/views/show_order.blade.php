@@ -47,7 +47,7 @@
                 <tr>
                     <td class="text-gray-500">{{$transaction->product->name}}</td>
                     <td class="text-gray-500">Rp{{$transaction->product->price}}</td>
-                    <td class="text-gray-500">{{$transaction->amount}} pcs</td>
+                    <td class="text-gray-500">{{$transaction->amount}} buku</td>
                 </tr>
                 @php
                 $total_price += $transaction->product->price * $transaction->amount;
@@ -68,7 +68,12 @@
                     @csrf
                     <label for="payment_receipt" class="text-lg text-gray-500">Unggah Bukti Pembayaran</label>
                     <div class="pt-3">
-                    <input type="file" name="payment_receipt" id="payment_receipt" class="border rounded-md text-gray-500"> <span><button type="submit" class="bg-blue-700 px-4 py-2 rounded text-white hover:bg-blue-500">Kirim</button></span>
+                    <input type="file" name="payment_receipt" id="payment_receipt" class="border rounded-md text-gray-500" value="{{ old('payment_receipt') }}" required autocomplete="payment_receipt"> <span><button type="submit" class="bg-blue-700 px-4 py-2 rounded text-white hover:bg-blue-500">Kirim</button></span>
+                    @error('payment_receipt')
+                            <span class="invalid-feedback" role="alert">
+                                <strong class="text-red-500">{{ $message }}</strong>
+                            </span>
+                    @enderror
                     </div>
                 </form>
             @endif

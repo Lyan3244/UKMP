@@ -12,11 +12,11 @@
 <div class="container mt-7 mx-auto md:px-12">
     <!-- awal header bg abu-abu -->
     <div class="mt-10 text-2xl text-gray-500 font-semibold whitespace-nowrap p-2">
-        Pesanan {{$order->id}}
+        No Pesanan {{$order->id}}
     </div>
     <hr>
     <div class="px-2 pt-2">
-        <a href="/riwayat" class="text-blue-700 hover:text-gray-500"> Riwayat Pesanan</a> <span class="text-gray-500">> Pesanan {{$order->id}}</span>
+        <a href="/riwayat" class="text-blue-700 hover:text-gray-500"> Riwayat Pesanan</a> <span class="text-gray-500">> No Pesanan {{$order->id}}</span>
     </div>
     @php
         $total_price = 0;
@@ -47,7 +47,7 @@
                 <tr>
                     <td class="text-gray-500">{{$transaction->product->name}}</td>
                     <td class="text-gray-500">Rp{{$transaction->product->price}}</td>
-                    <td class="text-gray-500">{{$transaction->amount}} pcs</td>
+                    <td class="text-gray-500">{{$transaction->amount}} buku</td>
                 </tr>
                 @php
                 $total_price += $transaction->product->price * $transaction->amount;
@@ -64,7 +64,7 @@
     <div class="pt-5">
         <div class="mx-auto border rounded-md w-4/6 py-3 px-7">
             @if($order->is_paid == false && $order->payment_receipt == null)
-                <form action="{{route('submit_payment_receipt', $order)}}" method="post" enctype = "multipart/form-data">
+                <form action="{{route('submit_payment_receipt', $order, $order->user_id)}}" method="post" enctype = "multipart/form-data">
                     @csrf
                     <label for="payment_receipt" class="text-lg text-gray-500">Unggah Bukti Pembayaran</label>
                     <div class="pt-3">

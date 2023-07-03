@@ -20,6 +20,7 @@ return new class extends Migration
             $table->integer('price');
             $table->string('sinopsis');
             $table->string('description');
+            $table->foreignId('types_id')->constrained('types')->cascadeOnUpdate()->cascadeOnDelete();
             $table->string('image');
             $table->integer('stock');
             $table->timestamps();

@@ -33,10 +33,11 @@ Route::middleware(['admin'])->group(function() {
     Route::post('/product/create', [ProductController::class, 'store_product'])->name('store_product');
     Route::get('/product/{product}/edit', [ProductController::class, 'edit_product'])->name('edit_product');
     Route::patch('/product/{product}/update', [ProductController::class, 'update_product'])->name('update_product');
-    
+
     Route::get('/order', [OrderController::class, 'index_order'])->name('index_order');
     Route::post('/order/{order}/Confirm', [OrderController::class, 'confirm_payment'])->name('confirm_payment');
-
+    Route::delete('/order/{order}', [OrderController::class, 'delete_order'])->name('delete_order');
+    
     Route::post('/prediksi/form', [PredictionController::class, 'store_prediksi'])->name('store_prediksi');
     Route::get('/prediksi/form', [PredictionController::class, 'prediksi'])->name('prediksi');
     Route::get('/prediksi/index', [PredictionController::class, 'index_prediksi'])->name('index_prediksi');

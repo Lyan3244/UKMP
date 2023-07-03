@@ -23,21 +23,21 @@
         @foreach($orders as $order)
         <div class="mx-auto border rounded-md w-4/6">
             <form action="{{route('show_order_riwayat', $order)}}" method="get">
-            @foreach($order->transactions as $transaction)
                 <button class="w-full" type="submit">
-                <div class="px-5 pt-3">
-                    <p class="py-1 text-gray-500 text-xl font-semibold text-left">Pesanan {{$order->id}}</p>
-                    <p class="py-1 text-gray-500 font-semibold text-left">{{$transaction->product->name}} - {{$transaction->amount}} pcs</p>
+                <p class="py-1 px-5 pt-4 text-gray-500 text-xl font-semibold text-left">ID Pesanan {{$order->id}}</p>
+            @foreach($order->transactions as $transaction)
+                <div class="px-5">
+                    <p class="py-1 text-gray-500 font-semibold text-left">{{$transaction->product->name}} - {{$transaction->amount}} buku</p>
                     @php
                         $total_price = $transaction->product->price * $transaction->amount;
                     @endphp
-                    <p class="py-1 text-blue-700 text-left font-semibold">Total Pesanan  : Rp{{$total_price}}</p>
+                    <p class="py-1 text-blue-700 text-left font-semibold">Total Harga Buku {{$transaction->product->name}}  : Rp{{$total_price}}</p>
                 </div>
                 </button>
             @endforeach
             </form>
             <div class="pb-12 px-2">
-                <a href="/cerpen"><button class = "bg-blue-700 hover:bg-blue-500 px-8 py-2 rounded float-right text-white">Beli Lagi</button></a>
+                <a href="/toko-buku"><button class = "bg-blue-700 hover:bg-blue-500 px-8 py-2 rounded float-right text-white">Beli Lagi</button></a>
             </div>
         </div>
         <br>

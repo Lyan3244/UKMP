@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Product;
+use App\Models\Type;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Redirect;
@@ -18,10 +19,11 @@ class ProductController extends Controller
 
     public function create_product()
     {
-        return view('create_product');
+        $types = Type::all();
+        return view('create_product', compact('types'));
     }
 
-    public function store_product(Request $request)
+    public function store_product(Type $type, Request $request)
     {
         $request->validate([
             'name'=> 'required',
@@ -30,11 +32,13 @@ class ProductController extends Controller
             'sinopsis'=>'required',
             'description'=> 'required',
             'image'=> 'required',
-            'writer'=>'required'
+            'writer'=>'required',
+            'types_id'=>'required'
         ]);
 
         $file = $request->file('image');
         $path = time() . '_' . $request->name . '.' . $file->getClientOriginalExtension();
+        $types_id = $type->id;
 
         Storage::disk('local')->put('public/'.$path, file_get_contents($file));
 
@@ -45,7 +49,8 @@ class ProductController extends Controller
             'sinopsis'=>$request->sinopsis,
             'description'=>$request->description,
             'image'=>$path,
-            'writer'=>$request->writer
+            'writer'=>$request->writer,
+            'types_id'=>$request->types_id
         ]);
 
         return Redirect::route('index_product');
@@ -70,10 +75,11 @@ class ProductController extends Controller
     
     public function edit_product(Product $product)
     {
-        return view('edit_product', compact('product'));
+        $types = Type::all();
+        return view('edit_product', compact(['product','types']));
     }
 
-    public function update_product(Product $product, Request $request)
+    public function update_product(Product $product, Type $type, Request $request)
     {
         $request->validate([
             'name'=> 'required',
@@ -82,7 +88,8 @@ class ProductController extends Controller
             'price'=> 'required',
             'stock'=> 'required',
             'description'=> 'required',
-            'image'=> 'required'
+            'image'=> 'required',
+            'types_id'=>'required'
         ]);
 
         $file = $request->file('image');
@@ -97,7 +104,8 @@ class ProductController extends Controller
             'price'=>$request->price,
             'stock'=>$request->stock,
             'description'=>$request->description,
-            'image'=>$path
+            'image'=>$path,
+            'types_id'=>$request->types_id
         ]);
 
         return Redirect::route('index_product');

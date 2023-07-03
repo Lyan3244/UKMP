@@ -16,15 +16,15 @@
                                 <!-- Item 1 -->
                                 <div class="hidden duration-700 ease-in-out" data-carousel-item>
                                     <span class="absolute top-1/2 left-1/2 text-2xl font-semibold text-white -translate-x-1/2 -translate-y-1/2 sm:text-3xl dark:text-gray-800">First Slide</span>
-                                    <img src="https://flowbite.com/docs/images/carousel/carousel-1.svg" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
+                                    <img src="https://images.tokopedia.net/img/cache/1190/wmEwCC/2023/3/24/b7f40542-b825-4855-829d-2ca0eee4e980.jpg.webp?ect=4g" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
                                 </div>
                                 <!-- Item 2 -->
                                 <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                                    <img src="https://flowbite.com/docs/images/carousel/carousel-2.svg" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
+                                    <img src="https://images.tokopedia.net/img/cache/1208/NsjrJu/2023/3/27/847af882-3f8a-4685-a781-af87b9669cf3.jpg.webp?ect=4g" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
                                 </div>
                                 <!-- Item 3 -->
                                 <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                                    <img src="https://flowbite.com/docs/images/carousel/carousel-3.svg" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
+                                    <img src="https://images.tokopedia.net/img/cache/1208/NsjrJu/2023/3/27/4cc52f96-7f1a-499e-b7ba-9d09396e34d1.jpg.webp?ect=4g" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
                                 </div>
                             </div>
                             <!-- Slider indicators -->
@@ -68,7 +68,7 @@
                             <header class="flex items-center justify-center leading-tight px-1 md:p-4">
                                 <h1 class="text-lg">
                                     <p class="text-gray-500">
-                                    {{$product->name}}
+                                    {{$product->name}} - {{$product->types->jenis_buku}}
                                     </p>
                                     <p class="text-gray-500">
                                         Rp{{$product->price}}

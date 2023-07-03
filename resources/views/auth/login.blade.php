@@ -1,5 +1,4 @@
 @extends('layouts.navbar-login')
-
 @section('content')
 <div class="container my-28">
     <div class="mx-60 border rounded-lg">
@@ -56,9 +55,9 @@
 
                             <div>
                                 @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
+                                    <!--<a class="btn btn-link" href="{{ route('password.request') }}">
                                     <p class="text-blue-700">{{ __('Forgot Your Password?') }}</p>
-                                    </a>
+                                    </a>-->
                                 @endif
                             </div>
                             </div>

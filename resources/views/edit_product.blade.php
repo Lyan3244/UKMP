@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit {{$product->name}}</title>
+    <title></title>
 </head>
 <body>
 <div class="container my-16">
@@ -43,6 +43,16 @@
                                 </div>
                             </div>
                             <div class="grid grid-cols-2 mb-3">
+                                <label class="col-md-4 col-form-label text-md-end text-gray-500 text-right pr-16">{{ __('Jenis Buku') }}</label>
+                                <div class="col-md-7">
+                                    <select class="form-control bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 w-full dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="types_id" value="{{$product->types_id}}">
+                                    @foreach($types as $type)
+                                        <option value="{{$type->id}}">{{$type->jenis_buku}}</option>
+                                    @endforeach
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-2 mb-3">
                                 <label class="col-md-4 col-form-label text-md-end text-gray-500 text-right pr-16">{{ __('Harga Buku') }}</label>
                                 <div class="col-md-7">
                                     <input type="number" class="form-control bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 w-full dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" value="{{$product->price}}" name="price" placeholder="Harga Buku">
@@ -65,7 +75,7 @@
                                     
                                 </div>
                                 <div class="col-md-8 offset-md-4">
-                                    <button type="submit" class="bg-blue-700 px-4 py-2 rounded">
+                                    <button type="submit" class="bg-blue-700 px-4 py-2 rounded hover:bg-blue-500">
                                         <p class="text-white">{{ __('Update Data') }}</p>
                                     </button>
                                 </div>

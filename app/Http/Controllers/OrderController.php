@@ -47,7 +47,8 @@ class OrderController extends Controller
 
     public function index_order_riwayat()
     {
-        $orders = Order::all();
+        $user_id = Auth::id();
+        $orders = Order::where('user_id', $user_id)->get();
         return view('index_order_riwayat', compact('orders'));
     }
 
@@ -81,5 +82,11 @@ class OrderController extends Controller
         ]);
 
         return Redirect::back();
+    }
+
+    public function delete_order(Order $order)
+    {
+        $order->delete();
+        return Redirect::route('index_order');
     }
 }

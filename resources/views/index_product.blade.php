@@ -33,7 +33,7 @@
                             <header class="flex items-center justify-center leading-tight px-1 md:p-4">
                                 <h1 class="text-lg">
                                     <p class="text-gray-500">
-                                    {{$product->name}}
+                                    {{$product->name}} - {{$product->types->jenis_buku}}
                                     </p>
                                     <p class="text-gray-500">
                                         Rp{{$product->price}}

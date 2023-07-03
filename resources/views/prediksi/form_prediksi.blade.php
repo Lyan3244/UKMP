@@ -20,55 +20,100 @@
                     <div class="grid grid-cols-2 mb-3">
                         <label class="col-md-4 col-form-label text-md-end text-gray-500 text-right pr-16">{{ __('Judul Buku') }}</label>
                         <div class="col-md-7">
-                            <input type="text" class="form-control bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 w-full dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="judul_buku" placeholder="Judul Buku">
+                            <input id="judul_buku" type="text" class="form-control bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 w-full dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="judul_buku" value="{{ old('judul_buku') }}" required autocomplete="judul_buku" placeholder="Judul Buku">
+                        @error('judul_buku')
+                            <span class="invalid-feedback" role="alert">
+                                <strong class="text-red-500">{{ $message }}</strong>
+                            </span>
+                        @enderror
                         </div>
                     </div>
                     <div class="grid grid-cols-2 mb-3">
                         <label class="col-md-4 col-form-label text-md-end text-gray-500 text-right pr-16">{{ __('Penjualan Maksimum') }}</label>
                         <div class="col-md-7">
-                            <input type="text" class="form-control bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 w-full dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="penjualan_max" placeholder="Penjualan Maksimum">
+                            <input id="penjualan_max" type="number" class="form-control bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 w-full dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="penjualan_max" value="{{ old('penjualan_max') }}" required autocomplete="penjualan_max" placeholder="Penjualan Maksimum">
+                        @error('penjualan_max')
+                            <span class="invalid-feedback" role="alert">
+                                <strong class="text-red-500">{{ $message }}</strong>
+                            </span>
+                        @enderror
                         </div>
                     </div>
                     <div class="grid grid-cols-2 mb-3">
                         <label class="col-md-4 col-form-label text-md-end text-gray-500 text-right pr-16">{{ __('Penjualan Minimum') }}</label>
                         <div class="col-md-7">
-                            <input type="text" class="form-control bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 w-full dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="penjualan_min" placeholder="Penjualan Minimum">
+                            <input id="penjualan_min" type="number" class="form-control bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 w-full dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="penjualan_min" value="{{ old('penjualan_min') }}" required autocomplete="penjualan_min" placeholder="Penjualan Minimum">
+                        @error('penjualan_min')
+                            <span class="invalid-feedback" role="alert">
+                                <strong class="text-red-500">{{ $message }}</strong>
+                            </span>
+                        @enderror
                         </div>
                     </div>
                     <div class="grid grid-cols-2 mb-3">
                         <label class="col-md-4 col-form-label text-md-end text-gray-500 text-right pr-16">{{ __('Persediaan Maksimum') }}</label>
                         <div class="col-md-7">
-                            <input type="text" class="form-control bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 w-full dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="persediaan_max" placeholder="Persediaan Maksimum">
+                            <input id="persediaan_max" type="number" class="form-control bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 w-full dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="persediaan_max" value="{{ old('persediaan_max') }}" required autocomplete="persediaan_max" placeholder="Persediaan Maksimum">
+                        @error('persediaan_max')
+                            <span class="invalid-feedback" role="alert">
+                                <strong class="text-red-500">{{ $message }}</strong>
+                            </span>
+                        @enderror
                         </div>
                     </div>
                     <div class="grid grid-cols-2 mb-3">
                         <label class="col-md-4 col-form-label text-md-end text-gray-500 text-right pr-16">{{ __('Persediaan Minimum') }}</label>
                         <div class="col-md-7">
-                            <input type="text" class="form-control bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 w-full dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="persediaan_min" placeholder="Persediaan Minimum">
+                            <input id="persediaan_min" type="number" class="form-control bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 w-full dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="persediaan_min" value="{{ old('persediaan_min') }}" required autocomplete="persediaan_min" placeholder="Persediaan Minimum">
+                        @error('persediaan_min')
+                            <span class="invalid-feedback" role="alert">
+                                <strong class="text-red-500">{{ $message }}</strong>
+                            </span>
+                        @enderror
                         </div>
                     </div>
                     <div class="grid grid-cols-2 mb-3">
                         <label class="col-md-4 col-form-label text-md-end text-gray-500 text-right pr-16">{{ __('Cetak Maksimum') }}</label>
                         <div class="col-md-7">
-                            <input type="text" class="form-control bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 w-full dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="cetak_max" placeholder="Cetak Maksimum">
+                            <input id="cetak_max" type="number" class="form-control bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 w-full dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="cetak_max" value="{{ old('cetak_max') }}" required autocomplete="cetak_max" placeholder="Cetak Maksimum">
+                        @error('cetak_max')
+                            <span class="invalid-feedback" role="alert">
+                                <strong class="text-red-500">{{ $message }}</strong>
+                            </span>
+                        @enderror
                         </div>
                     </div>
                     <div class="grid grid-cols-2 mb-3">
                         <label class="col-md-4 col-form-label text-md-end text-gray-500 text-right pr-16">{{ __('Cetak Minimum') }}</label>
                         <div class="col-md-7">
-                            <input type="text" class="form-control bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 w-full dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="cetak_min" placeholder="Cetak Minimum">
+                            <input id="cetak_min" type="number" class="form-control bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 w-full dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="cetak_min" value="{{ old('cetak_min') }}" required autocomplete="cetak_min" placeholder="Cetak Minimum">
+                        @error('cetak_min')
+                            <span class="invalid-feedback" role="alert">
+                                <strong class="text-red-500">{{ $message }}</strong>
+                            </span>
+                        @enderror
                         </div>
                     </div>
                     <div class="grid grid-cols-2 mb-3">
-                        <label class="col-md-4 col-form-label text-md-end text-gray-500 text-right pr-16">{{ __('Banyak Buku yang Terjual') }}</label>
+                        <label class="col-md-4 col-form-label text-md-end text-gray-500 text-right pr-16">{{ __('Banyak Pesanan Buku Tahun Ini') }}</label>
                         <div class="col-md-7">
-                            <input type="text" class="form-control bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 w-full dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="banyak_terjual" placeholder="Banyak Buku yang Terjual">
+                            <input id="banyak_terjual" type="number" class="form-control bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 w-full dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="banyak_terjual" value="{{ old('banyak_terjual') }}" required autocomplete="banyak_terjual" placeholder="Banyak Pesanan Buku Tahun Ini">
+                        @error('banyak_terjual')
+                            <span class="invalid-feedback" role="alert">
+                                <strong class="text-red-500">{{ $message }}</strong>
+                            </span>
+                        @enderror
                         </div>
                     </div>
                     <div class="grid grid-cols-2 mb-3">
-                        <label class="col-md-4 col-form-label text-md-end text-gray-500 text-right pr-16">{{ __('Persediaan Buku di UKMP') }}</label>
+                        <label class="col-md-4 col-form-label text-md-end text-gray-500 text-right pr-16">{{ __('Persediaan Buku di Awal Tahun') }}</label>
                         <div class="col-md-7">
-                            <input type="text" class="form-control bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 w-full dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="persediaan_buku" placeholder="Persediaan Buku di UKMP">
+                            <input id="persediaan_buku" type="number" class="form-control bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 w-full dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="persediaan_buku" value="{{ old('persediaan_buku') }}" required autocomplete="persediaan_buku" placeholder="Persediaan Buku di Awal Tahun">
+                        @error('persediaan_buku')
+                            <span class="invalid-feedback" role="alert">
+                                <strong class="text-red-500">{{ $message }}</strong>
+                            </span>
+                        @enderror
                         </div>
                     </div>
                     <div class="grid grid-cols-2">

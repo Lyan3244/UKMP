@@ -16,7 +16,8 @@ class Product extends Model
         'image',
         'stock',
         'writer',
-        'sinopsis'
+        'sinopsis',
+        'types_id'
     ];
 
 
@@ -28,5 +29,10 @@ class Product extends Model
     public function carts()
     {
         return $this->hasMany(Cart::class);
+    }
+
+    public function types()
+    {
+        return $this->belongsTo(Type::class);
     }
 }

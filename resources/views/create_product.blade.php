@@ -20,43 +20,88 @@
                             <div class="grid grid-cols-2 mb-3">
                                 <label class="col-md-4 col-form-label text-md-end text-gray-500 text-right pr-16">{{ __('Judul Buku') }}</label>
                                 <div class="col-md-7">
-                                    <input type="text" class="form-control bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 w-full dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="name" placeholder="Judul Buku">
+                                    <input id="name" type="text" class="form-control bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 w-full dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="name" value="{{ old('name') }}" required autocomplete="name" placeholder="Judul Buku">
+                                @error('name')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong class="text-red-500">{{ $message }}</strong>
+                                    </span>
+                                @enderror
                                 </div>
                             </div>
                             <div class="grid grid-cols-2 mb-3">
                                 <label class="col-md-4 col-form-label text-md-end text-gray-500 text-right pr-16">{{ __('Nama Penulis') }}</label>
                                 <div class="col-md-7">
-                                    <input type="text" class="form-control bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 w-full dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="writer" placeholder="Nama Penulis">
+                                    <input id="writer" type="text" class="form-control bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 w-full dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="writer" value="{{ old('writer') }}" required autocomplete="writer" placeholder="Nama Penulis">
+                                @error('writer')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong class="text-red-500">{{ $message }}</strong>
+                                    </span>
+                                @enderror
                                 </div>
                             </div>
                             <div class="grid grid-cols-2 mb-3">
                                 <label class="col-md-4 col-form-label text-md-end text-gray-500 text-right pr-16">{{ __('Sinopsis Buku') }}</label>
                                 <div class="col-md-7">
-                                    <input type="text" class="form-control bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 w-full dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="sinopsis" placeholder="Sinopsis Buku">
+                                    <input id="sinopsis" type="text" class="form-control bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 w-full dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="sinopsis" value="{{ old('sinopsis') }}" required autocomplete="sinopsis" placeholder="Sinopsis Buku">
+                                @error('sinopsis')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong class="text-red-500">{{ $message }}</strong>
+                                    </span>
+                                @enderror
                                 </div>
                             </div>
                             <div class="grid grid-cols-2 mb-3">
                                 <label class="col-md-4 col-form-label text-md-end text-gray-500 text-right pr-16">{{ __('Detail Buku') }}</label>
                                 <div class="col-md-7">
-                                    <input type="text" class="form-control bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 w-full dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="description" placeholder="Detail Buku">
+                                    <input id="description" type="text" class="form-control bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 w-full dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="description" value="{{ old('description') }}" required autocomplete="description" placeholder="Detail Buku">
+                                @error('description')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong class="text-red-500">{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-2 mb-3">
+                                <label class="col-md-4 col-form-label text-md-end text-gray-500 text-right pr-16">{{ __('Jenis Buku') }}</label>
+                                <div class="col-md-7">
+                                    <select class="form-control bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 w-full dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="types_id">
+                                    @foreach ($types as $type) 
+                                        <option value="{{$type->id}}">{{$type->jenis_buku}}</option>
+                                    @endforeach  
+                                    </select>
                                 </div>
                             </div>
                             <div class="grid grid-cols-2 mb-3">
                                 <label class="col-md-4 col-form-label text-md-end text-gray-500 text-right pr-16">{{ __('Harga Buku') }}</label>
                                 <div class="col-md-7">
-                                    <input type="number" class="form-control bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 w-full dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="price" placeholder="Harga Buku">
+                                    <input id="price" type="number" class="form-control bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 w-full dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="price" value="{{ old('price') }}" required autocomplete="price" placeholder="Harga Buku">
+                                @error('price')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong class="text-red-500">{{ $message }}</strong>
+                                    </span>
+                                @enderror
                                 </div>
                             </div>
                             <div class="grid grid-cols-2 mb-3">
                                 <label class="col-md-4 col-form-label text-md-end text-gray-500 text-right pr-16">{{ __('Stok Buku') }}</label>
                                 <div class="col-md-7">
-                                    <input type="number" class="form-control bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 w-full dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="stock" placeholder="Stok">
+                                    <input id="stock" type="number" class="form-control bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 w-full dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="stock" value="{{ old('stock') }}" required autocomplete="stock" placeholder="Stok">
+                                @error('stock')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong class="text-red-500">{{ $message }}</strong>
+                                    </span>
+                                @enderror
                                 </div>
                             </div>
                             <div class="grid grid-cols-2 mb-3">
                                 <label class="col-md-4 col-form-label text-md-end text-gray-500 text-right pr-16">{{ __('Gambar Buku') }}</label>
                                 <div class="col-md-7">
-                                    <input type="file" class="form-control bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 w-full dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="image">
+                                    <input id="image" type="file" class="form-control bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 w-full dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="image" value="{{ old('image') }}" required autocomplete="image">
+                                @error('image')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong class="text-red-500">{{ $message }}</strong>
+                                    </span>
+                                @enderror
                                 </div>
                             </div>
                             <div class="grid grid-cols-2">
@@ -64,7 +109,7 @@
                                     
                                 </div>
                                 <div class="col-md-8 offset-md-4">
-                                    <button type="submit" class="bg-blue-700 px-4 py-2 rounded">
+                                    <button type="submit" class="bg-blue-700 px-4 py-2 rounded hover:bg-blue-500">
                                         <p class="text-white">{{ __('Tambah Data') }}</p>
                                     </button>
                                 </div>

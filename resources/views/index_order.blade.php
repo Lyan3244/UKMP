@@ -24,7 +24,7 @@
         <div class="bg-gray-100 rounded-t">
             <div class="px-5 py-3">
             <p class="font-semibold text-lg text-gray-600">ID Pemesanan {{$order->id}} oleh {{$order->user->name}} - {{$order->user->telepon}}</p>
-            <p class="text-gray-600">Pengiriman ke {{$order->user->alamat}}</p>
+            <!--<p class="text-gray-600">Pengiriman ke {{$order->user->alamat}}</p>-->
             <p class="text-gray-600">{{$order->created_at}}</p>
             </div>
         </div>
@@ -47,15 +47,22 @@
             <span class="text-red-500 font-semibold">Belum Terbayar</span>
                 @if($order->payment_receipt)
                     <a href="{{url('storage/' . $order->payment_receipt)}}" class="text-blue-700 hover:text-blue-500">Lihat Bukti Pembayaran</a>
+                    <div class="pb-10">
                     <form action="{{route('confirm_payment', $order)}}" method="post">
                     @csrf
-                    <div class="pb-10">
                     <button type="submit" class="bg-blue-700 px-4 py-2 rounded text-white hover:bg-blue-500 float-right">Konfirmasi</button>
                     </div>
                     </form>
                 @endif
             @endif
         </p>
+            <div class="pt-2 pb-10">
+                <form action="{{route('delete_order', $order)}}" method="post">
+                @method('delete')
+                @csrf
+                    <button type="submit" class="bg-blue-700 px-4 py-2 rounded text-white text-md hover:bg-red-500 float-right">Hapus Pesanan</button>
+                </form>
+            </div>
         </div>
     </div>
     <br>
