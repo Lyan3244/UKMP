@@ -50,7 +50,7 @@ class CartController extends Controller
         $user_id = Auth::id();
         $carts = Cart::where('user_id', $user_id)->get();
 
-        return view('show_Cart', compact('carts'));
+        return view('show_cart', compact('carts'));
     }
 
     public function update_cart(Cart $cart, Request $request)

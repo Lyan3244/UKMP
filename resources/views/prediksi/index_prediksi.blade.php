@@ -28,161 +28,41 @@
                 <th class="text-gray-500">No</th>
                 <th class="text-gray-500">Judul Buku</th>
                 <th class="text-gray-500">
-                    <div class="
-                    relative
-                    before:content-[attr(data-tip)]
-                    before:absolute
-                    before:px-2 before:py-2
-                    before:w-max before:max-w-xs
-                    before:-translate-x-1 before:-translate-y-full
-                    before:bg-black before:text-white
-                    before:rounded-md before:opacity-0
-                    before:transition-all
-
-                    after:absolute
-                    after:h-0 after:w-0
-                    after:-translate-x-1 after:border-8
-                    after:border-t-black
-                    after:border-1-transparent
-                    after:border-b-transparent
-                    after:border-r-transparent
-                    after:opacity-0
-                    after:transition-all
-
-                    hover:before:opacity-100 hover:after:opacity-100
-                    "
-                    data-tip="Data Penjualan Maksimum Buku dari Tahun 2018 hingga 2023">
-                    <button class="py-3" id="btn">Penjualan Maksimum</button></th></div>
+                    <button data-tooltip-target="tooltip-default" type="button" class="focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Penjualan Maksimum</button>
+                    <div id="tooltip-default" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">Data Penjualan Maksimum Buku dari Tahun 2018 hingga 2023
+                        <div class="tooltip-arrow" data-popper-arrow></div>
+                    </div>
+                </th>
                 <th class="text-gray-500">
-                    <div class="
-                    relative
-                    before:content-[attr(data-tip)]
-                    before:absolute
-                    before:px-2 before:py-2
-                    before:w-max before:max-w-xs
-                    before:-translate-x-1 before:-translate-y-full
-                    before:bg-black before:text-white
-                    before:rounded-md before:opacity-0
-                    before:transition-all
-
-                    after:absolute
-                    after:h-0 after:w-0
-                    after:-translate-x-1 after:border-8
-                    after:border-t-black
-                    after:border-1-transparent
-                    after:border-b-transparent
-                    after:border-r-transparent
-                    after:opacity-0
-                    after:transition-all
-
-                    hover:before:opacity-100 hover:after:opacity-100
-                    "
-                    data-tip="Data Penjualan Minimum Buku dari Tahun 2018 hingga 2023">
-                    <button class="py-3" id="btn">Penjualan Minimum</button></th></div>
+                    <button data-tooltip-target="tooltip-default2" type="button" class="focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Penjualan Minimum</button>
+                    <div id="tooltip-default2" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">Data Penjualan Minimum Buku dari Tahun 2018 hingga 2023
+                        <div class="tooltip-arrow" data-popper-arrow></div>
+                    </div>
+                </th>
                 <th class="text-gray-500">
-                    <div class="
-                    relative
-                    before:content-[attr(data-tip)]
-                    before:absolute
-                    before:px-2 before:py-2
-                    before:w-max before:max-w-xs
-                    before:-translate-x-1 before:-translate-y-full
-                    before:bg-black before:text-white
-                    before:rounded-md before:opacity-0
-                    before:transition-all
-
-                    after:absolute
-                    after:h-0 after:w-0
-                    after:-translate-x-1 after:border-8
-                    after:border-t-black
-                    after:border-1-transparent
-                    after:border-b-transparent
-                    after:border-r-transparent
-                    after:opacity-0
-                    after:transition-all
-
-                    hover:before:opacity-100 hover:after:opacity-100
-                    "
-                    data-tip="Data Persediaan Maksimum Buku dari Tahun 2018 hingga 2023">
-                    <button class="py-3" id="btn">Persediaan Maksimum</button></th></div>
+                    <button data-tooltip-target="tooltip-default3" type="button" class="focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Persediaan Maksimum</button>
+                    <div id="tooltip-default3" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">Data Persediaan Maksimum Buku dari Tahun 2018 hingga 2023
+                        <div class="tooltip-arrow" data-popper-arrow></div>
+                    </div>
+                </th>
                 <th class="text-gray-500">
-                    <div class="
-                    relative
-                    before:content-[attr(data-tip)]
-                    before:absolute
-                    before:px-2 before:py-2
-                    before:w-max before:max-w-xs
-                    before:-translate-x-1 before:-translate-y-full
-                    before:bg-black before:text-white
-                    before:rounded-md before:opacity-0
-                    before:transition-all
-
-                    after:absolute
-                    after:h-0 after:w-0
-                    after:-translate-x-1 after:border-8
-                    after:border-t-black
-                    after:border-1-transparent
-                    after:border-b-transparent
-                    after:border-r-transparent
-                    after:opacity-0
-                    after:transition-all
-
-                    hover:before:opacity-100 hover:after:opacity-100
-                    "
-                    data-tip="Data Persediaan Minimum Buku dari Tahun 2018 hingga 2023">
-                    <button class="py-3" id="btn">Persediaan Minimum</button></th></div>
+                    <button data-tooltip-target="tooltip-default4" type="button" class="focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Persediaan Minimum</button>
+                    <div id="tooltip-default4" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">Data Persediaan Minimum Buku dari Tahun 2018 hingga 2023
+                        <div class="tooltip-arrow" data-popper-arrow></div>
+                    </div>
+                </th>
                 <th class="text-gray-500">
-                    <div class="
-                    relative
-                    before:content-[attr(data-tip)]
-                    before:absolute
-                    before:px-2 before:py-2
-                    before:w-max before:max-w-xs
-                    before:-translate-x-1 before:-translate-y-full
-                    before:bg-black before:text-white
-                    before:rounded-md before:opacity-0
-                    before:transition-all
-
-                    after:absolute
-                    after:h-0 after:w-0
-                    after:-translate-x-1 after:border-8
-                    after:border-t-black
-                    after:border-1-transparent
-                    after:border-b-transparent
-                    after:border-r-transparent
-                    after:opacity-0
-                    after:transition-all
-
-                    hover:before:opacity-100 hover:after:opacity-100
-                    "
-                    data-tip="Data Cetak Maksimum Buku dari Tahun 2018 hingga 2022">
-                    <button class="py-3" id="btn">Cetak Maksimum</button></th></div>
+                    <button data-tooltip-target="tooltip-default5" type="button" class="focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Cetak Maksimum</button>
+                    <div id="tooltip-default5" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">Data Cetak Maksimum Buku dari Tahun 2018 hingga 2022
+                        <div class="tooltip-arrow" data-popper-arrow></div>
+                    </div>
+                </th>
                 <th class="text-gray-500">
-                    <div class="
-                    relative
-                    before:content-[attr(data-tip)]
-                    before:absolute
-                    before:px-2 before:py-2
-                    before:w-max before:max-w-xs
-                    before:-translate-x-1 before:-translate-y-full
-                    before:bg-black before:text-white
-                    before:rounded-md before:opacity-0
-                    before:transition-all
-
-                    after:absolute
-                    after:h-0 after:w-0
-                    after:-translate-x-1 after:border-8
-                    after:border-t-black
-                    after:border-1-transparent
-                    after:border-b-transparent
-                    after:border-r-transparent
-                    after:opacity-0
-                    after:transition-all
-
-                    hover:before:opacity-100 hover:after:opacity-100
-                    "
-                    data-tip="Data Cetak Minimum Buku dari Tahun 2018 hingga 2022">
-                    <button class="py-3">Cetak Minimum</button></th></div>
+                    <button data-tooltip-target="tooltip-default6" type="button" class="focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Cetak Minimum</button>
+                    <div id="tooltip-default6" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">Data Cetak Minimum Buku dari Tahun 2018 hingga 2022
+                        <div class="tooltip-arrow" data-popper-arrow></div>
+                    </div>
+                </th>
                 <th class="text-gray-500">Banyak Pesanan Buku Tahun Ini</th>
                 <th class="text-gray-500">Persediaan Buku di Awal Tahun</th>
             </tr>

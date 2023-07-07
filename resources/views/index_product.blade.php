@@ -22,7 +22,7 @@
     </div>
 
     <!-- bagian daftar buku -->
-        <div class="grid grid-rows-2 grid-flow-col gap-2 items-center justify-center w-full">
+        <div class="grid grid-rows-5 grid-cols-5 grid-flow-col gap-2 items-center justify-center w-full">
             @foreach($products as $product)
                 <div class="px-2">
                     <div class="overflow-hidden rounded-lg shadow-md">
