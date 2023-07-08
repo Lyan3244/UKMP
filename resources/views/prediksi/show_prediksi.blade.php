@@ -104,7 +104,9 @@
         </thead>
         <tbody>
             <tr>
-                <td class="text-gray-500">Penjualan Naik [{{$prediction['banyak_terjual']}}]</td>
+                <td class="text-gray-500"><button data-tooltip-target="tooltip-default" type="button" class="focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Penjualan Naik [{{$prediction['banyak_terjual']}}]</button>
+                    <div id="tooltip-default" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">Nilai Fungsi Keanggotaan Penjualan Naik dengan Variabel Penjualan {{$prediction['banyak_terjual']}}<div class="tooltip-arrow" data-popper-arrow></div>
+                    </div></td>
                 <td class="text-gray-500">=</td>
                 <td class="text-gray-500">(x - penjualan_min) / (penjualan_max - penjualan_min)</td>
                 <td class="text-gray-500">=</td>
@@ -113,7 +115,10 @@
                 <td class="text-gray-500">{{$penjualan_naik}}</td>
             </tr>
             <tr>
-                <td class="text-gray-500">Penjualan Turun [{{$prediction['banyak_terjual']}}]</td>
+                <td class="text-gray-500"><button data-tooltip-target="tooltip-default2" type="button" class="focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Penjualan Turun [{{$prediction['banyak_terjual']}}]</button>
+                    <div id="tooltip-default2" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">Nilai Fungsi Keanggotaan Penjualan Turun dengan Variabel Penjualan {{$prediction['banyak_terjual']}}<div class="tooltip-arrow" data-popper-arrow></div>
+                    </div>
+                </td>
                 <td class="text-gray-500">=</td>
                 <td class="text-gray-500">(penjualan_max - x) / (penjualan_max - penjualan_min)</td>
                 <td class="text-gray-500">=</td>
@@ -140,7 +145,9 @@
         </thead>
         <tbody>
             <tr>
-                <td class="text-gray-500">Persediaan Banyak [{{$prediction['persediaan_buku']}}]</td>
+                <td class="text-gray-500"><button data-tooltip-target="tooltip-default3" type="button" class="focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Persediaan Banyak [{{$prediction['persediaan_buku']}}]</button>
+                    <div id="tooltip-default3" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">Nilai Fungsi Keanggotaan Persediaan Banyak dengan Variabel Persediaan {{$prediction['persediaan_buku']}}<div class="tooltip-arrow" data-popper-arrow></div>
+                    </div></td>
                 <td class="text-gray-500">=</td>
                 <td class="text-gray-500">(y - persediaan_min) / (persediaan_max - persediaan_min)</td>
                 <td class="text-gray-500">=</td>
@@ -149,7 +156,9 @@
                 <td class="text-gray-500">{{$persediaan_banyak}}</td>
             </tr>
             <tr>
-                <td class="text-gray-500">Persediaan Sedikit [{{$prediction['persediaan_buku']}}]</td>
+                <td class="text-gray-500"><button data-tooltip-target="tooltip-default4" type="button" class="focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Persediaan Sedikit [{{$prediction['persediaan_buku']}}]</button>
+                    <div id="tooltip-default4" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">Nilai Fungsi Keanggotaan Persediaan Sedikit dengan Variabel Persediaan {{$prediction['persediaan_buku']}}<div class="tooltip-arrow" data-popper-arrow></div>
+                    </div></td>
                 <td class="text-gray-500">=</td>
                 <td class="text-gray-500">(persediaan_max - y) / (persediaan_max - persediaan_min)</td>
                 <td class="text-gray-500">=</td>
@@ -233,6 +242,7 @@
     $batas_a1 = $A1*($prediction->cetak_max - $batas_cetak_naik) + $batas_cetak_naik;
     $batas_a2 = $prediction->cetak_max - ($A1*($prediction->cetak_max - $batas_cetak_naik));
     $MOM1 = (($batas_a1 + $batas_a2)/2);
+    $MOM3 = round(($batas_a1 + $batas_a2)/2);
     @endphp
 
     <!--buat ngitung rataan MOM tapi dari sisi kanan-->
@@ -240,6 +250,7 @@
     $batas_a3 = $A1*($batas_cetak_turun - $prediction->cetak_min) + $prediction->cetak_min;
     $batas_a4 = $batas_cetak_turun - $A1*($batas_cetak_turun - $prediction->cetak_min);
     $MOM2 = (($batas_a3 + $batas_a4)/2);
+    $MOM4 = round(($batas_a3 + $batas_a4)/2);
     @endphp
 
     <br>
@@ -249,6 +260,8 @@
                 <td class="text-blue-700">Hasil Prediksi Buku yang Harus dicetak Tahun Ini</td>
                 <td class="text-blue-700">=</td>
                 <td class="text-blue-700">{{$rule2 + $rule1 > $rule4 + $rule3 ? $MOM2 : $MOM1}}</td>
+                <td class="text-blue-700">≈</td>
+                <td class="text-blue-700">{{$rule2 + $rule1 > $rule4 + $rule3 ? $MOM4 : $MOM3}}</td>
             </tr>
         </thead>
         <tbody>
